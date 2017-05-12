@@ -97,6 +97,9 @@ class _Conv(Layer):
                  kernel_constraint=None,
                  bias_constraint=None,
                  **kwargs):
+        
+        # http://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods
+        # in Python 3.0: you can just say super().__init__()
         super(_Conv, self).__init__(**kwargs)
         self.rank = rank
         self.filters = filters
